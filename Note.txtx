@@ -1,0 +1,103 @@
+Conversions
+    "33"=>33
+    "33abc" => NaN -> Nota a number
+    true=> 1;
+    false=> 0
+    Conversions--> Number,String,Boolean, if string is empty and we want to convert it into Boolean then it will be converted into false 
+    "hitesh"=> true
+
+    Datatypes:
+        Two types --> Primitive and non-Primitive
+            Primitive--> call by value
+            Non-Primitive--> call by reference
+            Primitive include String,number,Boolean,BigInt,null,undefined,Symbol
+            null ek stand alone value h
+            NaN-->Not a Number
+            typeof(null)--> object
+            typeof(undefined)-->undefined
+            JS is dynamically typed language
+            null means completely empty, it doesnot means its value is zero
+
+            Primitive uses stack memory
+            Non-Primitive uses heap memory like objects
+
+            we use backticks for string interpolation 
+            to join two strings we use back ticks
+
+            Js has many things about number --
+                Number.Max_value
+                Number.Min_Value
+                Number.Safe_Value 
+
+        Math lib --->
+                Math.abs
+                Math.round
+                Math.ceil
+                Math.floor
+                The value of Math.random comes between 0 and 1
+                console.log(Math.floor(Math.random()*10)+1)
+                Math.floor(Math.random()*(max-min+1)+min) --> gives output between max and min
+
+    Strings methods --> substring,slice(slice can contain negative number)
+            upperCase,lowerCase,concat,indexOf,charAt,trim,replace
+
+    Number --> toFixed(2) --> it will give two decimal place after number
+        Number.toFixed(2)
+        Number.toPrecision(3)
+
+        //Date provides many function which gives the information about date in many ways
+        //type of date --> object
+
+        //Array--> when we make copy of array we make shallow copy
+        arr.join()-- bind the array and convert the type of array into string
+.
+        arr.slice--> returns the copy of section of array
+        splice function of array manipulates the original array while slice function doesnot manipulates the original array
+
+        Array can take any type of data in themselves
+
+        to convert any string into array --> Array.from("Harshit")
+        if it is not able to make the array then it will give an empty array
+        Array --> have the acsess of prototype in browser
+        Array.unshift(0)--add zero add first index
+        Arrays.shift()-->w/o parameter remove the first element 
+        myarr.join() --- converts the array into string
+
+        splice manipulates the original array
+        while slice doesnot do this
+        if we  push the array in array we get array inside the array
+        concat returns the new Array
+        array.flat(infinity)
+                returns the single array basically arrays k andhar arrays ko alag-alag kr deta h
+        object has prototype so if you want to learn more then u can check it on browser
+
+
+OBJECTS-->
+        to create object there are two main methods 
+                through literals
+                through constructor(object.create)--> it include singleton
+
+
+JavaScript Execution context 
+        Global Execution context
+        function Execution context
+        Eval Execution context
+
+
+//falsey values -->
+        false,0,-0,,BigInt 0n,"",null,,undefined,NaN
+
+//truthy values
+        "0",'false'," ",[],{},function(){}
+
+
+// to check empty array
+        eg:userEmail is array than use userEmail.length ===0 for checking
+
+//to check object
+        const emptyobj = {}
+        if(Object.keys(emptyobj).length===0) {
+                console.log("Object is Empty");
+        }
+
+//Nullish Coalescing Operator (??) : null undefined

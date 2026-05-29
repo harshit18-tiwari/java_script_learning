@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para">javascript is</p>
+    <button id="add">Click Me</button>
+    <script>
+        document.getElementById("add").onclick = function() {
+            document.getElementById("para").innerHTML = document.getElementById("para").innerHTML + " awsesome";
+        }
+    </script>
+    <!-- if there is no text in the html then we can add it by the same method -->
+     <!-- <script>
+        document.getElementById("add").onclick = function() {
+            document.getElementById("para").innerHTML ="this is random chunks of text..." you can provide any heading style also
+        }
+    </script> -->
+
+    <p id="pa">Harshit Tiwari</p>
+    <button id="butt">Submit</button>
+    <script>
+        document.getElementById("butt").onclick=function() {
+            document.getElementById("pa").style.color="red";
+            <!-- we can change the fontsize also     -->
+        }
+        // to remove the element from the screen
+    </script>
+
+    <p id="h"> Web</p>
+    <button id="b">Helooo</button>
+    <script>
+        document.getElementById("b").onclick=function() {
+            document.getElementById("h").style.display="none";
+        }
+    </script>
+</body>
+</html>

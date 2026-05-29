@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On-Click-Event</title>
+</head>
+<body>
+    <p id="first">Hi user</p>
+    <button id="change">Change text</button>
+    <script>
+        // change the content by clicking by using onclick = function() {the function you want to perform by clicking this button}
+        document.getElementById("change").onclick = function() {
+                <!-- alert("button clicked"); -->
+                document.getElementById("first").innerHTML = "Welcome!";
+        }
+    </script>
+</body>
+</html>

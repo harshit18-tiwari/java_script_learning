@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai Aur code</h1>
+    <button id ="stop">Stop</button>
+</body>
+
+<script>
+    setTimeout(function() {
+        console.log("Harshit");
+    }, 2000);//it will execute after 2 seconds
+    //setInterval--> takes iterval from us and repeat it after that particular time
+    //we can seperately make the function,then we can pass it as a handler in the setTimeout, which is done in the two.html
+   const changeText = function() {
+         document.querySelector('h1').innerHTML = "best JS series"
+   }
+   setTimeout(changeText,2000)
+     //to stop that setTimeout function we have another function to stop--> 
+    //clearTimeout--> kisi event p lagana rheta h isko,
+    //clearTimeout kisp lagana pdta h ye bhi btana pdta h
+
+
+    document.querySelector("#stop").addEventListener('click',function() {
+        clearTimeout(changeMe)
+        console.log("STOPPED");
+    })
+</script>
+</html>

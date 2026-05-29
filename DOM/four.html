@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code | DOM</title>
+</head>
+<body style="background-color:#212121; color:#fff">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    // we make a function to add element in list
+    //to create element
+    function addLanguage(langName) {
+        const li = document.createElement('li');//to create list item, it is always the first step
+        li.innerHTML = `${langName}`//abhi ye memory m h, khi attach nhi h abhi, jo ul list h language k vha attach krna h
+        document.querySelector('.language').appendChild(li)//this os for attaching
+    }
+    addLanguage("python")
+    addLanguage("typescript")
+
+    //optimise
+    function addOptiLanguage(langName) {
+        const li = document.createElement('li')
+        //in-place of innerHTML
+        li.appendChild(document.createTextNode(langName))
+
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addOptiLanguage('goLang')
+
+    //Edit
+     const secondLang = document.querySelector("li:nth-child(2)")
+     //secondLang.innerHTML = "Mojo"//shortcut(this method will also work)
+     const newli = document.createElement('li');
+     newli.textContent = "Mojo"//yeh abhi hawa m h//add text context after creating new element
+     secondLang.replaceWith(newli)
+
+     //another method of editing
+     const firstLang = document.querySelector("li:first-child")
+     firstLang.outerHTML = '<li>TypeScript</li>'
+
+     //remove
+     const lastLang = document.querySelector('li:last-child')
+     lastLang.remove()
+</script>
+</html>
